@@ -1,0 +1,32 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 2966801095@qq.com
+    password: ecdbdtvzynfhdcdb
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            socketFactoryPort: 465
+            connectiontimeout: 5000
+            timeout: 5000
+            writetimeout: 5000
+
+
+alipay:
+  app-id: 9021000158623050
+  merchant-private-key: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCyDn4YIGds4WP6tDe0w2phM+/ZpOg2Q/UDvtiL6KDmRP4JCtw8aTIR8DcFNFPLdh8FcOLNHdMBcln1iX/j3jA4m/PX4be+infYpSVuN167Rz/haX+6skqsFYH8mluIJTeKB47RxVsxPqWDO4rWRIB3mwDtbKz2ZHUPXyBqFu2dehoEQuu7Vy3jR8iQwda/W5fXQxcbbJbIawjvQ1WhpUYyd8eYfI4IRj5eBAjCp1AyH65AkeqKps4x3no2V/9GjMAjMQ65fC1e13M25ycdTsrG/M2HGMTTk0SgwFcDEDT6Fu4uyMX9ZSq6ZHUUsrODSWrO6cT4eN+DmTNJHMYVUVyDAgMBAAECggEAZj3sKe5xdRP3VP4m/qU3cJliIJeQv5hGGOB9d9kcix0Swh56WDYPij1lWpexhiNNrNIlaaK2hx4iidtqlG4BQoBKhKwX1lGsf7pUw/UHcIJ5K/ZoYcv/FNFE0sfPx12XhqrQV6P7uUs/vxtxnZe4LPXUkoDU0KbekPUOp9yClOmRaR8g+WRLfhdQIUcm8zi7tNtegKRy9oTPOds0DLI1BDTDZeVs+n1hnSPBdZb9jS+Wk6TO+oxVZsZ/0wp6MbJJheP0EcMWJCnWOhiAEslXeKVmf3TuGSM335lgrFSTP5dXfYIECFSD1WXZ4nDdF+GUJ0tov5Ie2U7ZJ39LI3QgAQKBgQDtyRV0AeRFzszhnL9NDcgh529wJuHYMhls2JGLVh1rsr3zeNUtchPTITiLdI9FOyszHVqh8sujQx3N83De9Vdyhv+QRDRzLEakYKycX1lmUK18sP3tvfF+c7wUJQKnWVfNZeb9oLtBFfU0YmPtY0nO6Udb0RG1uvaamvaUkxYGsQKBgQC/siPSHYyPdxLAQVkfELUZw0L569B9GPysNOHN8SXh9yto1xqff7RnkvZiI7JAtHiXajac16uaeeHvIp11Pb/I381mJaq4n9g/WrMuJfLtl2tnOZ5y2k2hldMP48kzzbxb2o8NFKj1jDSXR5Fjq8M6UBYcdBBRG3sRx6uCQH7LcwKBgDfeNQIqp52XNyATGgdao5kDrXUmTY3kR4EBaUDZnNP/DQ41Z7DjyrCib4ykeD0F5+J8lRzT1PCpBkmrVuurrT4lZcpZnBErZ/WbGTMsW+7kKb7QPvkq1aCmRJxfDb6QCUcjGCCjMRvbst759wyBdYf921xBRO3z3Zj5q9HAtT4hAoGALw00iaBDHfumGJZxn5RkPzyUNe/RrsLxUftw6TGlkL8wYn1ZxYh86WdDHneQix1A9DlXykuNjU8ZS679YweTCWUVb1sTelmRpItIq60Y4YRnEmEsKRi4MU8rDR1mB1caQpl0v0sw5YRSbEdewk4ojymVI8rBLodGP+j4ifH2rU0CgYBTigdhj+iCXgBwQmyrZUcJ4UK9AbBy6VKst58vJzYcbSCITQqF+Wu9Q1bBOTSim/Rhs6VlgvE88w2pvVSIK7jAjhXyzlFAjUSjdiFjna0Re/Fq4/VTy2T4UWUAWkxR/wfVRXi4x5oumudQcWVRRA5UdSJu4WEVFyUI8xKBpapPig==
+  alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1TR2uAtzFp2NJ9Nh67QPE2MLfOEScHFPFSSTLOcotLYlbjSzK5jOxFgTFBaXpFzaJkH/7zZg+pwZ7Wijk3Qr1zNNnFSxgu/dHeFO62yVudJbnM7Uf3zOaBiR7v9AflHPT4JF+zga/j/+Ekkd7YSSTIm1yoIyIpIRI6wgn5gpBFb0izTLiECjavYiWusHtVjnNQ5EHa+vupANxk91vrUwn6egNu41Q71RSJVaOWCXI9R715padbUSjiSu+dubHFkRjaCUxCeuBj3O1Ycc20Na3NrJ3hviwVN/VDtP3vL4TwJfaVvoOULW2FTCBJsrMLWcnwp9kRVC39xzXZuODch9bQIDAQAB
+  notify-url: http://localhost:8080/payment/alipay/callback
+  return-url: http://localhost:8080/orders/success
+  gateway-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  charset: UTF-8
+  sign-type: RSA2
